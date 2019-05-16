@@ -6,6 +6,25 @@ Deploy Django Application to AWS EC2 or Lightsail (Ubuntu 18.04)
 
 ## Settings before deploy
 
+- Environment Variables
+    - `python-decouple`
+        ```bash 
+        $ pip install python-decouple
+        ```
+    - `.env`
+        ```bash
+        # .env
+        SECRET_KEY='...'
+        ...
+        ```
+    - `settings.py`
+        ```python
+        # settings.py
+        from decouple import config # 추가
+        
+        SECRET_KEY = config('SECRET_KEY')
+        ```
+
 - ALLOWED_HOSTS
     - public IP들은 인스턴스 생성 후에 알 수 있으므로, 사용하게 될 경우 나중에 추가.
         ```python
