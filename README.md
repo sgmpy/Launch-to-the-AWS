@@ -270,7 +270,7 @@ Choose one, but **Lightsail** is recommanded
     - 아래 내용 추가
     ```
     location /static/ {
-    		alias /home/ubuntu/[PROJECT_DIR_NAME]/staticfiles/;
+        alias /home/ubuntu/[PROJECT_DIR_NAME]/staticfiles/;
     }
     ```
 
